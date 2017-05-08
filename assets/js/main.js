@@ -1,12 +1,11 @@
-function Miembro (nombre,edad,hobb1,hobb2,hobb3,img){
+function Miembro (nombre,edad,hobb1,hobb2,hobb3){
 		this.nombre = nombre;
 		this.edad = edad;
 		this.hobb1 = hobb1;
 		this.hobb2 = hobb2;
 		this.hobb3 = hobb3;
-		this.img = "http://icon-icons.com/icons2/11/PNG/256/customer_person_people_woman_you_1627.png" 
 		this.imprimir = function(){
-			var imprimir =  (this.img + "<b>" + "<br>"+ "Nombre: " + "</b>"+ this.nombre + "<br>" +"<b>" + "Edad: " + 
+			var imprimir =  ("<b>" + "Nombre: " + "</b>"+ this.nombre + "<br>" +"<b>" + "Edad: " + 
                     "</b>" + this.edad + "<br>"+"<b>" + "Hobbies: " + "</b>" + "<li>" + 
                     this.hobb1 +"<li>" + this.hobb2 +"<li>"+ this.hobb3 + "<br>");
 
@@ -47,5 +46,10 @@ document.getElementById("daniela").innerHTML = coder6.imprimir();
 document.getElementById("pez").innerHTML = coder7.imprimir();
 document.getElementById("karina").innerHTML = coder8.imprimir();
 document.getElementById("maribel").innerHTML = coder9.imprimir();
+
+function comentario(mensaje){
+	var comentario = document.getElementById("texto").value;
+	var caja 
+}
 
  
