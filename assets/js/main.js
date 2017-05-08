@@ -48,8 +48,13 @@ document.getElementById("karina").innerHTML = coder8.imprimir();
 document.getElementById("maribel").innerHTML = coder9.imprimir();
 
 function comentario(mensaje){
+	var arr = [];
 	var comentario = document.getElementById("texto").value;
-	var caja 
+	var caja = document.getElementById("coment1");
+
+	var nuevoComent = caja.innerHTML = comentario;
+
+	arr.push(nuevoComent);
 }
 
  
