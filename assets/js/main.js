@@ -5,8 +5,8 @@ function Miembro(num,nombre,edad,hobbies){
 	this.hobbies = hobbies;
 }
 var coment = [];
-function Comentario(comentario,like){
-	
+function Comentario(id,comentario,like){
+	this.id = id;
 	this.comentario = comentario;
 	this.like = like;
 }
@@ -38,29 +38,32 @@ function mostrar(elemento){
 		
 		});
 
-		txt += "<h3> Comentarios </h3>" + "<div id='caja" + elemento.num + "'>"+"</div>" + "<textarea id='texto" + elemento.num + "'>" + "</textarea>" + "<button onclick='agregar(" + elemento.nick +  ")'>Agregar"+"</button>";	});
+		txt += "<h3> Comentarios </h3>" + "<div id='caja'" + elemento.id + "'>"+"</div>" + "<textarea id='textos'" + elemento.id + "'>" + "</textarea>" + "<button onclick='agregar("+ elemento.id +")'>Agregar"+"</button>";
 	contenedor.innerHTML = txt;
-
+	});
 }
-function agregar(personas){
-	var texto = document.getElementById("texto").value;
-	var box = document.getElementById("caja" + personas);
-	var nota = new Comentario(personas,texto,0);
+	
+
+function agregar(personasId){
+	console.log("id",personasId);
+	var texto =document.getElementById("textos").value;
+	var caja = document.getElementById("caja" + personasId);
+	var nota = new Comentario(personasId,texto,0);
 
 	coment.push(nota);
 
-	box.innerHTML += "<p>" + nota.comentario + "<p>" + "<button id='boton' onclick='like(this)'>Like"+"</button>" + "<span>" + 0 + "</span>";
+	caja.innerHTML += "<p>" + nota.comentario + "</p>" + "<button id='boton' onclick='like(this)'>Like"+"</button>" + "<span>" + 0 + "</span>";
 	texto = " ";
 }
 
 function like(click){
 	var up = click.nextSibling;
-	suma.innerHTML = parseInt(suma.innerHTML) + 1;
+	up.innerHTML = parseInt(suma.innerHTML) + 1;
 }
 
+
+
 mostrar();
-
-
 
 
 
